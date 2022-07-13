@@ -21,10 +21,10 @@ from blog.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/',include('blog.urls')),
+    path('blog/', include('blog.urls')),
 ]
 
 handler404 = page_not_found
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
