@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include,re_path
+from django.urls import path, include, re_path
 from News import settings
 from blog.views import *
+from blog import views
+
 
 urlpatterns = [
+    path('', views.skip, name='base'),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
 ]
